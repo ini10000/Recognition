@@ -8,6 +8,7 @@ class signin extends React.Component {
 			signInPassword: ''
 		}
 	}
+
 	onEmailChange = (event) => {
 		this.setState({signInEmail: event.target.value})
 	}
@@ -38,7 +39,7 @@ class signin extends React.Component {
 		const { onRouteChange } = this.props;
 		return (
 			<article 
-				className="br3 ba dark-gray b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
+				className="tc br3 ba dark-gray b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
 				<main 
 					className="pa4 black-80">
 				  <div 
@@ -74,6 +75,7 @@ class signin extends React.Component {
 				    <div 
 				    	className="">
 				      <input 
+				      	onKeyPress={this.handleKeyPress}
 				      	onClick = {this.onSubmitSignIn}
 				      	className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" 
 				      	type="submit" 
